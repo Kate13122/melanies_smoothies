@@ -25,8 +25,8 @@ name_on_order = st.text_input("Name on Smoothie:")
 from snowflake.snowpark.functions import col
 
 #session = get_active_session()
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
-st.dataframe(data=my_dataframe, use_container_width=True)
+#my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
+#st.dataframe(data=my_dataframe, use_container_width=True)
 
 ingredients_list = st.multiselect( 'Choose up to 5 ingredients:', 
                                    my_dataframe
