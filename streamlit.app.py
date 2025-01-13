@@ -48,8 +48,8 @@ if ingredients_list:
         search_on = pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON'].iloc[0]
         
         # Correct indentation here
-        st.write(f"The search value for {fruit_chosen} is {search_on}.")
-        st.subheader(f'{fruit_chosen} Nutrition Information')  # This line is properly indented
+        search_on=pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON'].iloc[0]
+        st.write('The search value for ', fruit_chosen,' is ', search_on, '.')
         
         # Make the API call for each selected fruit
         smoothiefroot_response = requests.get(f"https://my.smoothiefroot.com/api/fruit/{search_on}")
