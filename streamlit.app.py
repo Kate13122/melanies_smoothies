@@ -3,7 +3,7 @@ import streamlit as st
 cnx = st.connection ("snowflake")
 session = cnx.session()
 import requests
-import pandas
+import pandas as pd
 
 
 # Write directly to the app
